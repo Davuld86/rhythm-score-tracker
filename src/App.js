@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React, { Fragment, useState } from 'react';
+import {Route, Routes} from "react-router-dom";
 import './App.css';
+import NavBar from './NavBar';
+import DDR from './DDR';
+import CloneHero from './CloneHero';
+import MusicDiver from './MusicDiver';
+import HighScoreForum from './HighScoreForum';
+
+import Home from './Home';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <Fragment>
+  <h1>Rhythm Game Record Tracker</h1>
+  <NavBar/>
+  <Routes>
+  <Route path='/' Component ={Home}/>
+      
+   <Route path='/add-score' Component={HighScoreForum}/>
+   
+    <Route path='/ddr' Component={DDR}/>
+     
+    
+    <Route path='/clone-hero' Component={CloneHero}/>
+     
+    
+    <Route path='/music-diver'Component={MusicDiver}/>
+    </Routes>
+  </Fragment>
+  )
 }
 
 export default App;

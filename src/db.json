@@ -1,0 +1,42 @@
+{
+    "DDRScores":[
+        {
+        "id": 1, 
+        "songName": "True Love",
+        "songLink" : "https://www.youtube.com/watch?v=9Lth3MpR89k&ab_channel=BemaniCentral",
+        "highScore": 962354,
+        "highScoreDate": "Sept,5,2021"
+        
+    }
+
+    ],
+    "CloneHeroScores":[
+        {
+            "id": 1, 
+            "songName": "True Love",
+            "songLink" : "https://www.youtube.com/watch?v=9Lth3MpR89k&ab_channel=BemaniCentral",
+            "highScore": 962354,
+            "highScoreDate": "Sept,5,2021"
+        }
+
+    ], 
+    "MusicDiverScores":[
+        {
+            "id": 1, 
+            "songName": "True Love",
+            "songLink" : "https://www.youtube.com/watch?v=9Lth3MpR89k&ab_channel=BemaniCentral",
+            "highScore": 962354,
+            "highScoreDate": "Sept,5,2021"
+        }
+
+    ]
+
+
+
+
+
+
+
+
+
+}
