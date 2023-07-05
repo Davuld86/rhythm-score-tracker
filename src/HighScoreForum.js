@@ -1,37 +1,61 @@
 import React,{useState} from "react";
 
-function HighScoreForum(){
-    const [gameType, setGameType] = useState()
-    const[songName, setSongName] = useState('')
-    const [songLink, setSongLink] = useState('')
-    const [score, setScore] = useState(0)
-    const[date, setDate] = useState()
-
-
-
+function HighScoreForum({handleScoreSubmit}){
+    
+    const [gameType, setGameType] = useState('Dance Dance Revolution')
+    const[formData, setFormData] = useState({
+                                            songName:songName,
+                                            songLink: songLink,
+                                            highScore: score,
+                                            date: date})
+   
+    
+    function handleSongName(e){
+        setFormData({
+            ...formData,
+            songName:e.target.value
+        })
+    }
+    function handleSongLink(e){
+        setFormData({
+            ...formData,
+            songLink:e.target.value
+        })
+    }
+    function handleScore(e){
+        setFormData({
+            ...formData,
+            highScore:e.target.value
+        })
+    }
+    function handleDate(e){
+        setFormData({
+            ...formData,
+            date:e.target.value
+        })
+    }
 
     return(
         <div className="high-score-forum">
             <h1>Put your high scores here</h1>
-            <form>
+            <form onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(gameType,formData)}}>
                 <label>Game Type</label>
-                <select>
+                <select value={gameType} onChange={(e)=> setGameType(e.target.value)}>
                     <option>Dance Dance Revolution</option>
                     <option>Clone Hero</option>
                     <option>Music Diver</option>
                 </select>
-
                 <label>Song Name</label>
-                <input type="text" required></input>
+                <input type="text" required value={formData.songName} onChange={(e)=> handleSongName(e)}></input>
 
                 <label>Song link</label>
-                <input type="text" required></input>
+                <input type="text" required value={formData.songLink} onChange={(e)=>handleSongLink(e)}></input>
 
                 <label>Score</label>
-                <input type="number" required></input>
+                <input type="number" required placeholder="0" value={formData.highScore} onChange={(e)=> handleScore(e)}></input>
 
                 <label>Date Achieved</label>
-                <input type="date" required></input>
+                <input type="date"  required value={formData.date} onChange={(e)=>handleDate(e)}></input>
                 <button>Submit Score</button>
             </form>
         </div>
