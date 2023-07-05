@@ -1,9 +1,14 @@
 import React from "react";
+import FilterBar from "./FilterBar";
 
 
 function MusicDiver(){
     return(
-        <h1>Music Diver </h1>
+       
+        <div>
+        <h1>Music Diver </h1> 
+        <FilterBar/>
+        </div>
     )
 
 }
