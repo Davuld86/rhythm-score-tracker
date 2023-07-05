@@ -1,15 +1,12 @@
 import React,{useState} from "react";
 
 function HighScoreForum({handleScoreSubmit}){
-    
     const [gameType, setGameType] = useState('Dance Dance Revolution')
     const[formData, setFormData] = useState({
-                                            songName:songName,
-                                            songLink: songLink,
-                                            highScore: score,
-                                            date: date})
-   
-    
+                                            songName: '',
+                                            songLink: '',
+                                            highScore: '',
+                                            date: ''})
     function handleSongName(e){
         setFormData({
             ...formData,
