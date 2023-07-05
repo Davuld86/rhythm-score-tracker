@@ -1,13 +1,14 @@
 import React from "react";
-import FilterBar from "./FilterBar";
+import ScoreContainer from "./ScoreContainer";
 
 
-function MusicDiver(){
+function MusicDiver({scores}){
     return(
        
         <div>
-        <h1>Music Diver </h1> 
-        <FilterBar/>
+        <h1>Music Diver </h1>
+        <img alt="Music Diver logo" src="https://arcadebelgium.com/forum/pix22/musicdiver_logo.png"/>
+        <ScoreContainer scores={scores}/>
         </div>
     )
 

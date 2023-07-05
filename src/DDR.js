@@ -1,11 +1,12 @@
 import React from "react";
-import FilterBar from "./FilterBar";
+import ScoreContainer from "./ScoreContainer";
 
-function DDR(){
+function DDR({scores}){
     return (
         <div>
         <h1>DDR</h1>
-        <FilterBar/>
+        <img alt="DDR logo" src="https://systemshuffle.files.wordpress.com/2013/09/ddr2009logo.png"/>
+        <ScoreContainer scores={scores}/>
         </div>
     )
 }

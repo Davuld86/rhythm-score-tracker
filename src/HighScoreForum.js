@@ -1,12 +1,11 @@
 import React,{useState} from "react";
 
 function HighScoreForum({handleScoreSubmit}){
+    const formDefault ={ songName: '', songLink: '', highScore: '', date: ''}
     const [gameType, setGameType] = useState('Dance Dance Revolution')
-    const[formData, setFormData] = useState({
-                                            songName: '',
-                                            songLink: '',
-                                            highScore: '',
-                                            date: ''})
+   
+    const[formData, setFormData] = useState({ songName: '', songLink: '', highScore: '', date: ''})
+
     function handleSongName(e){
         setFormData({
             ...formData,
@@ -35,7 +34,7 @@ function HighScoreForum({handleScoreSubmit}){
     return(
         <div className="high-score-forum">
             <h1>Put your high scores here</h1>
-            <form onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(gameType,formData)}}>
+            <form onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(gameType,formData); setFormData(formDefault)}}>
                 <label>Game Type</label>
                 <select value={gameType} onChange={(e)=> setGameType(e.target.value)}>
                     <option>Dance Dance Revolution</option>
@@ -45,7 +44,7 @@ function HighScoreForum({handleScoreSubmit}){
                 <label>Song Name</label>
                 <input type="text" required value={formData.songName} onChange={(e)=> handleSongName(e)}></input>
 
-                <label>Song link</label>
+                <label>Video link to song</label>
                 <input type="text" required value={formData.songLink} onChange={(e)=>handleSongLink(e)}></input>
 
                 <label>Score</label>

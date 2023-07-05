@@ -1,42 +1,36 @@
 {
-    "DDRScores":[
-        {
-        "id": 1, 
-        "songName": "True Love",
-        "songLink" : "https://www.youtube.com/watch?v=9Lth3MpR89k&ab_channel=BemaniCentral",
-        "highScore": 962354,
-        "date": "Sept,5,2021"
-        
+  "DDRScores": [
+    {
+      "id": 1,
+      "songName": "True Love",
+      "songLink": "https://www.youtube.com/embed/9Lth3MpR89k",
+      "highScore": 962354,
+      "date": "Sept,5,2021"
+    },
+    {
+      "songName": "Magic Door",
+      "songLink": "https://www.youtube.com/embed/xkn7sZ6IkxA",
+      "highScore": "954608",
+      "date": "2022-04-19",
+      "id": 2
     }
-
-    ],
-    "CloneHeroScores":[
-        {
-            "id": 1, 
-            "songName": "True Love",
-            "songLink" : "https://www.youtube.com/watch?v=9Lth3MpR89k&ab_channel=BemaniCentral",
-            "highScore": 962354,
-            "date": "Sept,5,2021"
-        }
-
-    ], 
-    "MusicDiverScores":[
-        {
-            "id": 1, 
-            "songName": "True Love",
-            "songLink" : "https://www.youtube.com/watch?v=9Lth3MpR89k&ab_channel=BemaniCentral",
-            "highScore": 962354,
-            "date": "Sept,5,2021"
-        }
-
-    ]
-
-
-
-
-
-
-
-
-
+  ],
+  "CloneHeroScores": [
+    {
+      "id": 1,
+      "songName": "True Love",
+      "songLink": "https://www.youtube.com/embed/9Lth3MpR89k",
+      "highScore": 962354,
+      "date": "Sept,5,2021"
+    }
+  ],
+  "MusicDiverScores": [
+    {
+      "id": 1,
+      "songName": "True Love",
+      "songLink": "https://www.youtube.com/embed/9Lth3MpR89k",
+      "highScore": 962354,
+      "date": "Sept,5,2021"
+    }
+  ]
 }

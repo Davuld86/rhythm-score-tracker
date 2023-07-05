@@ -1,12 +1,16 @@
 import React,{useState} from 'react'
 
 function FilterBar() {
-    const [filterToggle, setToggle] = useState(false)
+    const [deleteMode,setDeleteMode] = useState(false)
     const [nameSearch, setSearch] =useState('')
-    const [sortBy,setSortBy] = useState('Song Name')
+    const [sortBy,setSortBy] = useState('Date (recent)')
 
     function handleSort(e){
         setSortBy(e.target.value)
+    }
+
+    function handleDeleteMode(e){
+        setDeleteMode(e.target.value)
     }
 
   return (
@@ -14,12 +18,16 @@ function FilterBar() {
         <input type='text' placeholder='Search song name...' value={nameSearch} onChange={(e)=>setSearch(e.target.value)}></input>
         <label> Sort by...
             <select value={sortBy} onChange={(e)=> handleSort(e)}>
-                <option>Song Name</option>
-                <option>Score</option>
-                <option>Date</option>
-            </select>
-            <input type='checkbox' value={filterToggle} onChange={(e)=> setToggle(e)}></input>
+                <option>Song Name (A-Z) </option>
+                <option>Score (high to low)</option>
+                <option>Date (recent)</option>
+            </select>   
             </label>
+            <label>
+                Remove scores
+                <input type='checkbox' value={deleteMode} onChange={(e)=> handleDeleteMode(e)}></input>
+            </label>
+
     </div>
   )
 }
