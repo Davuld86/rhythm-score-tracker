@@ -2,13 +2,13 @@ import React from "react";
 import ScoreContainer from "./ScoreContainer";
 
 
-function MusicDiver({scores}){
+function MusicDiver({scores, handleDelete}){
     return(
        
         <div>
         <h1>Music Diver </h1>
         <img alt="Music Diver logo" src="https://arcadebelgium.com/forum/pix22/musicdiver_logo.png"/>
-        <ScoreContainer scores={scores}/>
+        <ScoreContainer handleDelete={handleDelete} scores={scores}/>
         </div>
     )
 

@@ -23,16 +23,14 @@ function HomeScoreContainer({game,scores}) {
         scores.slice(0,scores.length >=8? 8: scores.length).sort((a,b)=> new Date(b.date) - new Date(a.date))
   return (
     <div>
-        <h3>Recent {game} records:
         <img src={image} alt={game}/>
-        </h3>
+        <h2>Recent {game} records:</h2>
         {scores.map((score)=><Score key={score.id} score={score}/>)}
         <div className='seeMore'>
         <Link to={path}>
         <span>See more scores</span>
         <FaIcons.FaArrowCircleRight/>
         </Link>
-        
         </div>
     </div>
   )

@@ -1,10 +1,15 @@
 import React,{useState} from "react";
 
 function HighScoreForum({handleScoreSubmit}){
-    const formDefault ={ songName: '', songLink: '', highScore: '', date: ''}
-    const [gameType, setGameType] = useState('Dance Dance Revolution')
-   
-    const[formData, setFormData] = useState({ songName: '', songLink: '', highScore: '', date: ''})
+    const formDefault ={gameType:'Dance Dance Revolution',songName: '', songLink: '', highScore: '', date: ''}
+    const[formData, setFormData] = useState({gameType:'Dance Dance Revolution', songName: '', songLink: '', highScore: '', date: ''})
+
+    function handleGameType(e){
+        setFormData({
+            ...formData,
+            gameType:e.target.value
+        })
+    }
 
     function handleSongName(e){
         setFormData({
@@ -31,12 +36,13 @@ function HighScoreForum({handleScoreSubmit}){
         })
     }
 
+
     return(
         <div className="high-score-forum">
             <h1>Put your high scores here</h1>
-            <form onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(gameType,formData); setFormData(formDefault)}}>
+            <form onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(formData); setFormData(formDefault)}}>
                 <label>Game Type</label>
-                <select value={gameType} onChange={(e)=> setGameType(e.target.value)}>
+                <select value={formData.gameType} onChange={(e)=> handleGameType(e.target.value)}>
                     <option>Dance Dance Revolution</option>
                     <option>Clone Hero</option>
                     <option>Music Diver</option>

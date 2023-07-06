@@ -12,5 +12,4 @@ function Home({dScores,cScores,mScores}){
         </div>
     )
 }
-
 export default Home

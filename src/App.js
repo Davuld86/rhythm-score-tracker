@@ -15,10 +15,9 @@ function App() {
   const [cScores, setCScores]= useState([])
   const [mScores, setMScores]= useState([])
 
-  function handleScoreSubmit(game,sObj){
-    console.log(sObj)
+  function handleScoreSubmit(sObj){
     let link = ''
-    switch(game){
+    switch(sObj.gameType){
       case 'Dance Dance Revolution':
          link = 'http://localhost:3000/DDRScores'
          sObj.id = dScores.length +1
@@ -48,6 +47,33 @@ function App() {
     })
     
   }
+
+  function handleScoreDelete(score){
+    let link = ''
+    switch(score.gameType){
+      case 'Dance Dance Revolution':
+         link ='http://localhost:3000/DDRScores'
+         const dTemp = dScores.filter((s)=> s.id!=score.id)
+         setDScores(dTemp)
+         break;
+
+      case 'Clone Hero':
+         link= 'http://localhost:3000/CloneHeroScores'
+         const cTemp = cScores.filter((s)=> s.id!=score.id)
+         setDScores(cTemp)
+         break;
+
+      case 'Music Diver':
+         link ='http://localhost:3000/MusicDiverScores'
+         const mTemp = mScores.filter((s)=> s.id!=score.id)
+         setDScores(mTemp)
+         break;
+    }
+    fetch(link`/${score.id}`,{
+      method: "DELETE",
+      headers: {'Content-type':'application/json'}
+    })
+  }
   
   useEffect(()=>{
     fetch('http://localhost:3000/DDRScores')
@@ -70,9 +96,9 @@ function App() {
   <Routes>
   <Route path='/' element={<Home dScores={dScores} mScores={mScores} cScores={cScores}/>}/>
     <Route path='/add-score' element={<HighScoreForum handleScoreSubmit={handleScoreSubmit}/>}/>
-    <Route path='/ddr' element={<DDR scores={dScores}/>}/>
-    <Route path='/clone-hero' element={<CloneHero scores={cScores}/>}/>
-    <Route path='/music-diver' element={<MusicDiver scores={mScores}/>}/>
+    <Route path='/ddr' element={<DDR scores={dScores} handleDelete={handleScoreDelete}/>}/>
+    <Route path='/clone-hero' element={<CloneHero scores={cScores} handleDelete={handleScoreDelete}/>}/>
+    <Route path='/music-diver' element={<MusicDiver scores={mScores} handleDelete={handleScoreDelete}/>}/>
     </Routes>
   </Fragment>
   )
