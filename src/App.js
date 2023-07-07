@@ -48,6 +48,7 @@ function App() {
     
   }
 
+
   function handleScoreDelete(score){
     let link = ''
     switch(score.gameType){
@@ -74,7 +75,24 @@ function App() {
       headers: {'Content-type':'application/json'}
     })
   }
-  
+
+  function setScores(scores){
+    switch(scores[0].gameType){
+      case 'Dance Dance Revolution':
+         setDScores((dScores)=> dScores=scores)
+         
+         break;
+      case 'Clone Hero':
+         setCScores((cScores)=> cScores=scores)
+         break;
+      case 'Music Diver':
+         setMScores((mScores)=> mScores=scores)
+         break;
+    }
+  }
+
+
+
   useEffect(()=>{
     fetch('http://localhost:3000/DDRScores')
     .then((r)=>r.json())
@@ -96,9 +114,9 @@ function App() {
   <Routes>
   <Route path='/' element={<Home dScores={dScores} mScores={mScores} cScores={cScores}/>}/>
     <Route path='/add-score' element={<HighScoreForum handleScoreSubmit={handleScoreSubmit}/>}/>
-    <Route path='/ddr' element={<DDR scores={dScores} handleDelete={handleScoreDelete}/>}/>
-    <Route path='/clone-hero' element={<CloneHero scores={cScores} handleDelete={handleScoreDelete}/>}/>
-    <Route path='/music-diver' element={<MusicDiver scores={mScores} handleDelete={handleScoreDelete}/>}/>
+    <Route path='/ddr' element={<DDR scores={dScores} handleDelete={handleScoreDelete} setScores={setScores}/>}/>
+    <Route path='/clone-hero' element={<CloneHero scores={cScores} handleDelete={handleScoreDelete} setScores={setScores}/>}/>
+    <Route path='/music-diver' element={<MusicDiver scores={mScores} handleDelete={handleScoreDelete}setScores={setScores}/>}/>
     </Routes>
   </Fragment>
   )
