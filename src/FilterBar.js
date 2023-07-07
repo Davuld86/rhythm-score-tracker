@@ -1,14 +1,15 @@
 import React,{useState} from 'react'
 
-function FilterBar({handleDeleteMode, deleteMode, handleSort}) {
+function FilterBar({handleDeleteMode, deleteMode, handleSort, handleSearch}) {
     
+
     const [nameSearch, setSearch] =useState('')
     const [sortBy,setSortBy] = useState('Date (recent)')
 
    
   return (
     <div>
-        <input type='text' placeholder='Search song name...' value={nameSearch} onChange={(e)=>setSearch(e.target.value)}></input>
+        <input type='text' placeholder='Search song name...' value={nameSearch} onChange={(e)=>{setSearch(e.target.value);handleSearch(e)}}></input>
         <label> Sort by...
             <select value={sortBy} onChange={(e)=>{setSortBy(e.target.value);handleSort(e)}}>
                 <option>Song Name (A-Z) </option>

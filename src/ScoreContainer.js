@@ -4,6 +4,8 @@ import FilterBar from "./FilterBar";
 
 function ScoreContainer({scores, handleDelete, setScores}){
     const [deleteMode,setDeleteMode] = useState(false)
+    const [nameSearch, setSearch] =useState('')
+    
 
     function handleDeleteMode(e){
         setDeleteMode(!deleteMode)
@@ -25,12 +27,18 @@ function ScoreContainer({scores, handleDelete, setScores}){
         setScores([...temp])
       }
     
+    function handleSearch(e){
+       setSearch(e.target.value)
+    }
+    
 
     return(
     <div>
         <h1>Songs go here</h1>
-        <FilterBar handleDeleteMode={handleDeleteMode} deleteMode={deleteMode} handleSort={handleSort}/>
-         {scores.map((score)=>
+        <FilterBar handleDeleteMode={handleDeleteMode} deleteMode={deleteMode} handleSort={handleSort} handleSearch={handleSearch}/>
+         {scores.filter((score)=>{
+            return nameSearch.toLocaleLowerCase == ''?  score: score.songName.toLocaleLowerCase().includes(nameSearch)
+         }).map((score)=>
          <Score key={score.id} score={score} deleteMode={deleteMode} handleDelete={handleDelete}/>
          )}
     </div>  
