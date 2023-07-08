@@ -34,7 +34,6 @@ function ScoreContainer({scores, handleDelete, setScores}){
 
     return(
     <div>
-        <h1>Songs go here</h1>
         <FilterBar handleDeleteMode={handleDeleteMode} deleteMode={deleteMode} handleSort={handleSort} handleSearch={handleSearch}/>
          {scores.filter((score)=>{
             return nameSearch.toLocaleLowerCase == ''?  score: score.songName.toLocaleLowerCase().includes(nameSearch)

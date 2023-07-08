@@ -11,9 +11,9 @@ export const SidebarData =[
         cName: 'nav-text'
     },
     {
-        title: 'RecordNew Score',
+        title: 'Record New Score',
         path: '/add-score',
-        icon: <AiIcons.AiFillHome/>,
+        icon: <AiIcons.AiOutlineForm/>,
         cName: 'nav-text'
     },
     {
