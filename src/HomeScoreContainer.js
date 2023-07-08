@@ -2,6 +2,7 @@ import React from 'react'
 import Score from './Score';
 import * as FaIcons from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import './HomeScoreCont.css';
 
 function HomeScoreContainer({game,scores}) {
     let path =''
@@ -22,10 +23,10 @@ function HomeScoreContainer({game,scores}) {
         }
         scores.slice(0,scores.length >=8? 8: scores.length).sort((a,b)=> new Date(b.date) - new Date(a.date))
   return (
-    <div>
-        <img src={image} alt={game}/>
+    <div className='container'>
+        <img src={image} alt={game} className='imageHeader'/>
         <h2>Recent {game} records:</h2>
-        {scores.map((score)=><Score key={score.id} score={score}/>)}
+        {scores.map((score)=><Score key={score.id} score={score} className={'card'}/>)}
         <div className='seeMore'>
         <Link to={path}>
         <span>See more scores</span>
