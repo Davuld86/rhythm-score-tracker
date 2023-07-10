@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Score from './Score';
 import * as FaIcons from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -23,17 +23,23 @@ function HomeScoreContainer({game,scores}) {
         }
         scores.slice(0,scores.length >=8? 8: scores.length).sort((a,b)=> new Date(b.date) - new Date(a.date))
   return (
+   <Fragment>
+   <div className='header'>
+    <img src={image} alt={game} className='imageHeader'/>
+    <h2>Recent {game} records:</h2>
+    </div>
     <div className='container'>
-        <img src={image} alt={game} className='imageHeader'/>
-        <h2>Recent {game} records:</h2>
         {scores.map((score)=><Score key={score.id} score={score} className={'card'}/>)}
         <div className='seeMore'>
+        <div className='link'> 
         <Link to={path}>
         <span>See more scores</span>
         <FaIcons.FaArrowCircleRight/>
         </Link>
         </div>
+        </div>
     </div>
+    </Fragment>
   )
 }
 
