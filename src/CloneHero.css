@@ -1,0 +1,23 @@
+.CHpage{
+    text-align:center;
+    justify-content:center;
+    background: rgb(57,88,240);
+    background: linear-gradient(131deg, rgba(57,88,240,1) 0%, rgba(0,255,184,1) 100%);
+}
+
+.CHHeader{
+    width: auto;
+    text-align:center;
+    justify-content:center;
+}
+
+.CHHeader img{
+    width:auto;
+    max-height:256px;
+    filter: drop-shadow(5px 5px 5px #222)
+    
+}
+
+.card{
+    background-color: ##ab1e1a ;
+}
