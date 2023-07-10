@@ -1,7 +1,7 @@
 .itemBox{
 display:grid;
 grid-template-columns: repeat(3,1fr);
-
+padding: 10px;
 }
 
 .filterBar{
@@ -10,4 +10,19 @@ grid-template-columns: repeat(3,1fr);
     font-size: 15px;
     background-color:#c2bfff;
     padding:10px;
+    align-items:center;
+}
+
+.filterBar input {
+    width:auto;
+    height: 30px;
+    font-size:15px;
+    text-align:center;
+}
+
+.filterBar select {
+    width:auto;
+    height: 30px;
+    font-size:15px;
+    text-align:center;
 }

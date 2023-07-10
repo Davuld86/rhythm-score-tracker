@@ -1,0 +1,16 @@
+.MDpage{
+    background: rgb(50,85,255);
+    background: radial-gradient(circle, rgba(50,85,255,1) 0%, rgba(255,62,228,1) 100%);
+}
+
+.MDheader{
+    width: auto;
+    text-align:center;
+    justify-content:center;
+}
+
+.MDheader img{
+    width:auto;
+    max-height:256px;
+    filter: drop-shadow(5px 5px 5px #222)
+}

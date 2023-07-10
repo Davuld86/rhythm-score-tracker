@@ -79,8 +79,7 @@ function App() {
   function setScores(scores){
     switch(scores[0].gameType){
       case 'Dance Dance Revolution':
-         setDScores((dScores)=> dScores=scores)
-         
+         setDScores((dScores)=> dScores=scores) 
          break;
       case 'Clone Hero':
          setCScores((cScores)=> cScores=scores)
@@ -90,8 +89,6 @@ function App() {
          break;
     }
   }
-
-
 
   useEffect(()=>{
     fetch('http://localhost:3000/DDRScores')
@@ -108,7 +105,7 @@ function App() {
   },[])
 
   return (
-  <Fragment>
+  <div className='app'>
   <h1>Rhythm Game Record Recorder</h1>
   <NavBar/>
   <Routes>
@@ -118,7 +115,7 @@ function App() {
     <Route path='/clone-hero' element={<CloneHero scores={cScores} handleDelete={handleScoreDelete} setScores={setScores}/>}/>
     <Route path='/music-diver' element={<MusicDiver scores={mScores} handleDelete={handleScoreDelete}setScores={setScores}/>}/>
     </Routes>
-  </Fragment>
+  </div>
   )
 }
 
