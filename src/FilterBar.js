@@ -19,7 +19,7 @@ function FilterBar({handleDeleteMode, deleteMode, handleSort, handleSearch}) {
             </label>
             <label>
                 Remove scores
-                <input type='checkbox' checked={deleteMode} onChange={(e)=> handleDeleteMode(e)}></input>
+                <input type='checkbox' className='checkbox' checked={deleteMode} onChange={(e)=> handleDeleteMode(e)}></input>
             </label>
     </div>
   )

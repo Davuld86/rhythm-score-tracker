@@ -48,12 +48,8 @@
     align-items: center;
     padding: 0px 16px;
     border-radius: 4px;
-
 }
 
-.nav-text span:hover{
-    background-color: #1a83ff;
-}
 
 .nav-text svg{
     width: 50px;
