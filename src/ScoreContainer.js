@@ -1,6 +1,7 @@
-import React,{useState} from "react";
+import React,{useState, Fragment} from "react";
 import Score from "./Score";
 import FilterBar from "./FilterBar";
+import './ScoreContainer.css'
 
 function ScoreContainer({scores, handleDelete, setScores}){
     const [deleteMode,setDeleteMode] = useState(false)
@@ -33,14 +34,18 @@ function ScoreContainer({scores, handleDelete, setScores}){
     
 
     return(
-    <div>
+    <Fragment>
+      <div className='filterBar'>
         <FilterBar handleDeleteMode={handleDeleteMode} deleteMode={deleteMode} handleSort={handleSort} handleSearch={handleSearch}/>
+        </div>
+        <div className='itemBox'>
          {scores.filter((score)=>{
             return nameSearch.toLocaleLowerCase == ''?  score: score.songName.toLocaleLowerCase().includes(nameSearch)
          }).map((score)=>
          <Score key={score.id} score={score} deleteMode={deleteMode} handleDelete={handleDelete}/>
          )}
-    </div>  
+    </div>
+    </Fragment>  
     ) 
 }
 

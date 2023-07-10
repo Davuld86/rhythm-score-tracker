@@ -1,0 +1,13 @@
+.itemBox{
+display:grid;
+grid-template-columns: repeat(3,1fr);
+
+}
+
+.filterBar{
+    display:grid;
+    justify-content:center;
+    font-size: 15px;
+    background-color:#c2bfff;
+    padding:10px;
+}
