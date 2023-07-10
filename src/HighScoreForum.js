@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import './Form.css'
 
 function HighScoreForum({handleScoreSubmit}){
     const formDefault ={gameType:'Dance Dance Revolution',songName: '', songLink: '', highScore: '', date: ''}
@@ -36,11 +37,10 @@ function HighScoreForum({handleScoreSubmit}){
         })
     }
 
-
     return(
-        <div className="high-score-forum">
+        <div className="formPage">
             <h1>Put your high scores here</h1>
-            <form onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(formData); setFormData(formDefault)}}>
+            <form className='form' onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(formData); setFormData(formDefault)}}>
                 <label>Game Type</label>
                 <select value={formData.gameType} onChange={(e)=> handleGameType(e.target.value)}>
                     <option>Dance Dance Revolution</option>
@@ -63,5 +63,4 @@ function HighScoreForum({handleScoreSubmit}){
         </div>
     )
 }
-
 export default HighScoreForum

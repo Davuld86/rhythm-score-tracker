@@ -1,0 +1,39 @@
+.formPage{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    display:grid;
+    justify-content:center;
+}
+
+.form{
+    font-size:30px;
+    display:inline-grid;
+    justify-self:center;
+    justify-content: center;
+    justify-items: center;
+    text-align:center;
+    border-radius:5px;
+}
+.form input{
+    width: 400px;
+    height:50px;
+    font-size: 25px;
+    text-align:center;
+    border-radius:5px;
+}
+
+.form button{
+   
+    width: 50%;
+    height:40px;
+    margin-top: 10px;
+    border-radius:5px;
+}
+
+.form select{
+    width: 400px;
+    height:50px;
+    font-size:25px;
+    text-align:center;
+    border-radius:5px;
+}
