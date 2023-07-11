@@ -15,6 +15,22 @@ function App() {
   const [cScores, setCScores]= useState([])
   const [mScores, setMScores]= useState([])
 
+  
+  function handleLink(link){
+    let ytID = getId(link)
+        // replace:
+        let nLink = `https://www.youtube.com/embed/${ytID}`
+        return nLink
+  }
+
+  function getId(url) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11)
+      ? match[2]
+      : null;
+}
+  
   function handleScoreSubmit(sObj){
     let link = ''
     switch(sObj.gameType){
@@ -37,6 +53,8 @@ function App() {
          setMScores(mTemp)
          break;
     }
+
+    sObj.songLink = handleLink(sObj.songLink)
 
     fetch(link,{
       method: 'POST',

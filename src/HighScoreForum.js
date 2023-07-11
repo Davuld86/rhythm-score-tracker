@@ -20,22 +20,11 @@ function HighScoreForum({handleScoreSubmit}){
     }
 
     function handleSongLink(e){
-        let ytID = getId(e.target.value)
-        // replace:
-        let link = `https://www.youtube.com/embed/${ytID}`
+        
         setFormData({
             ...formData,
-            songLink:link
+            songLink:e.target.value
         })
-    }
-
-    function getId(url) {
-        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-        const match = url.match(regExp);
-    
-        return (match && match[2].length === 11)
-          ? match[2]
-          : null;
     }
     
     function handleScore(e){

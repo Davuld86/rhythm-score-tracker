@@ -1,8 +1,9 @@
 .container{
    margin-top: 10px;
-    display:flex;
+    display:grid;
    overflow-x: scroll;
    overflow-y: hidden;
+   grid-template-columns: repeat(11,1fr);
    padding: 20px;
    background-color: #1c34bc
 }

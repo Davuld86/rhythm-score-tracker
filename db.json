@@ -15,17 +15,17 @@
       "highScore": "954608",
       "date": "2022-04-19",
       "id": 2
+    },
+    {
+      "gameType": "Dance Dance Revolution",
+      "songName": "Super Driver",
+      "songLink": "https://www.youtube.com/embed/lRl4pwehQz4",
+      "highScore": "809345",
+      "date": "2022-07-14",
+      "id": 3
     }
   ],
   "CloneHeroScores": [
-    {
-      "id": 1,
-      "gameType": "Clone Hero",
-      "songName": "True Love",
-      "songLink": "https://www.youtube.com/embed/9Lth3MpR89k",
-      "highScore": 962354,
-      "date": "Sept,5,2021"
-    },
     {
       "gameType": "Clone Hero",
       "songName": "Free Bird",
