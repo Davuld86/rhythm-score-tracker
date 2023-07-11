@@ -37,12 +37,12 @@
   ],
   "MusicDiverScores": [
     {
-      "id": 1,
       "gameType": "Music Diver",
-      "songName": "True Love",
-      "songLink": "https://www.youtube.com/embed/9Lth3MpR89k",
-      "highScore": 962354,
-      "date": "Sept,5,2021"
+      "songName": "Hyper Sampler",
+      "songLink": "https://www.youtube.com/embed/CqW11rEZmSo",
+      "highScore": "996532",
+      "date": "2023-07-06",
+      "id": 2
     }
   ]
 }
