@@ -61,16 +61,16 @@ function App() {
       case 'Clone Hero':
          link= 'http://localhost:3000/CloneHeroScores'
          const cTemp = cScores.filter((s)=> s.id!=score.id)
-         setDScores(cTemp)
+         setCScores(cTemp)
          break;
 
       case 'Music Diver':
          link ='http://localhost:3000/MusicDiverScores'
          const mTemp = mScores.filter((s)=> s.id!=score.id)
-         setDScores(mTemp)
+         setMScores(mTemp)
          break;
     }
-    fetch(link`/${score.id}`,{
+    fetch(`${link}/${score.id}`,{
       method: "DELETE",
       headers: {'Content-type':'application/json'}
     })
