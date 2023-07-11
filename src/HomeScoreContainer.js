@@ -31,12 +31,12 @@ function HomeScoreContainer({game,scores}) {
     <div className='container'>
         {scores.map((score)=><Score key={score.id} score={score} className={'card'}/>)}
         <div className='seeMore'>
-        <div className='link'> 
         <Link to={path}>
+        <div className='link'> 
         <span>See more scores</span>
         <FaIcons.FaArrowCircleRight/>
-        </Link>
         </div>
+        </Link>
         </div>
     </div>
     </Fragment>

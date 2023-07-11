@@ -23,6 +23,22 @@
       "highScore": "809345",
       "date": "2022-07-14",
       "id": 3
+    },
+    {
+      "gameType": "Dance Dance Revolution",
+      "songName": "Happy Angel",
+      "songLink": "https://www.youtube.com/embed/ZBTao8gS52s",
+      "highScore": "904583",
+      "date": "2023-05-03",
+      "id": 4
+    },
+    {
+      "gameType": "Dance Dance Revolution",
+      "songName": "Going up",
+      "songLink": "https://www.youtube.com/embed/fQ-unkMdfD4",
+      "highScore": "876032",
+      "date": "2023-06-08",
+      "id": 5
     }
   ],
   "CloneHeroScores": [
@@ -51,6 +67,14 @@
       "highScore": "996532",
       "date": "2023-07-06",
       "id": 2
+    },
+    {
+      "gameType": "Music Diver",
+      "songName": "KING ",
+      "songLink": "https://www.youtube.com/embed/vh_8tbDqILE",
+      "highScore": "653984",
+      "date": "2023-03-22",
+      "id": 3
     }
   ]
 }
