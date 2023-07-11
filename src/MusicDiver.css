@@ -1,6 +1,6 @@
 .MDpage{
-    background: rgb(50,85,255);
-    background: radial-gradient(circle, rgba(50,85,255,1) 0%, rgba(255,62,228,1) 100%);
+    background: rgb(103,53,225);
+    background: radial-gradient(circle, rgba(103,53,225,1) 11%, rgba(249,40,219,1) 20%, rgba(30,139,221,1) 100%);
 }
 
 .MDheader{

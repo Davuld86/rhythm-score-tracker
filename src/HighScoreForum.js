@@ -42,7 +42,7 @@ function HighScoreForum({handleScoreSubmit}){
             <h1>Put your high scores here</h1>
             <form className='form' onSubmit={(e)=>{e.preventDefault();handleScoreSubmit(formData); setFormData(formDefault)}}>
                 <label>Game Type</label>
-                <select value={formData.gameType} onChange={(e)=> handleGameType(e.target.value)}>
+                <select value={formData.gameType} onChange={(e)=> handleGameType(e)}>
                     <option>Dance Dance Revolution</option>
                     <option>Clone Hero</option>
                     <option>Music Diver</option>
