@@ -25,7 +25,7 @@ function HomeScoreContainer({game,scores}) {
   return (
    <Fragment>
    <div className='header'>
-    <img src={image} alt={game} className='imageHeader'/>
+    <Link to={path}><img src={image} alt={game} className='imageHeader'/></Link>
     <h2>Recent {game} records:</h2>
     </div>
     <div className='container'>
