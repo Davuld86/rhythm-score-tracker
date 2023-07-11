@@ -25,6 +25,22 @@
       "songLink": "https://www.youtube.com/embed/9Lth3MpR89k",
       "highScore": 962354,
       "date": "Sept,5,2021"
+    },
+    {
+      "gameType": "Clone Hero",
+      "songName": "Free bird",
+      "songLink": "https://www.youtube.com/watch?v=J9olZAyrs8A&ab_channel=%C3%98ystein%C3%85arseth",
+      "highScore": "614804",
+      "date": "2023-07-07",
+      "id": 2
+    },
+    {
+      "gameType": "Clone Hero",
+      "songName": "Free Bird",
+      "songLink": "https://www.youtube.com/embed/J9olZAyrs8A",
+      "highScore": "614804",
+      "date": "2023-07-05",
+      "id": 3
     }
   ],
   "MusicDiverScores": [

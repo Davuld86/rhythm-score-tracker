@@ -1,8 +1,8 @@
 .container{
    margin-top: 10px;
-    display:grid;
+    display:flex;
    overflow-x: scroll;
-   grid-template-columns: repeat(3, .5fr);
+   overflow-y: hidden;
    padding: 20px;
    background-color: #1c34bc
 }
@@ -47,12 +47,6 @@ h2{
     background-color: #09386e;
     transition:cubic-bezier(0.075, 0.82, 0.165, 1)
 }
-
-.link{
-    position:relative;
-    top: 50%
-}
-
 
 .card{
     transition: 0.3s;
