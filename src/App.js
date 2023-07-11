@@ -28,13 +28,13 @@ function App() {
          link=  'http://localhost:3000/CloneHeroScores'
          sObj.id = cScores.length +1
          const cTemp = [...cScores, sObj]
-         setDScores(cTemp)
+         setCScores(cTemp)
          break;
       case 'Music Diver':
          link = 'http://localhost:3000/MusicDiverScores'
          sObj.id = mScores.length +1
          const mTemp = [...mScores, sObj]
-         setDScores(mTemp)
+         setMScores(mTemp)
          break;
     }
 
