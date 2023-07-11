@@ -7,7 +7,6 @@ function CloneHero({scores, handleDelete, setScores}){
         <div className='CHpage'>
 
         <div className='CHHeader'>
-        <h1>Clone Hero Records</h1>
         <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/logo/577ef1154f3240ad5b9b413aa7346a1e.png" alt="Clone Hero logo"/>
         </div>
         

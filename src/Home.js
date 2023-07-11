@@ -5,7 +5,6 @@ import HomeScoreContainer from "./HomeScoreContainer";
 function Home({dScores,cScores,mScores}){
     return(
         <div className="home">
-        <h1 style={{textAlign:'center'}}>home</h1>
         <HomeScoreContainer game={'DDR'} scores={dScores}/>
         <HomeScoreContainer game={'Clone Hero'} scores={cScores}/>
         <HomeScoreContainer game={'Music Diver'} scores={mScores}/>
