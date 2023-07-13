@@ -15,7 +15,7 @@ function App() {
   const [cScores, setCScores]= useState([])
   const [mScores, setMScores]= useState([])
 
-  
+
   function handleLink(link){
     let ytID = getId(link)
         // replace:
@@ -30,7 +30,7 @@ function App() {
       ? match[2]
       : null;
 }
-  
+
   function handleScoreSubmit(sObj){
     let link = ''
     switch(sObj.gameType){
@@ -63,7 +63,7 @@ function App() {
       },
       body: JSON.stringify(sObj)
     })
-    
+
   }
 
 
@@ -97,7 +97,7 @@ function App() {
   function setScores(scores){
     switch(scores[0].gameType){
       case 'Dance Dance Revolution':
-         setDScores((dScores)=> dScores=scores) 
+         setDScores((dScores)=> dScores=scores)
          break;
       case 'Clone Hero':
          setCScores((cScores)=> cScores=scores)

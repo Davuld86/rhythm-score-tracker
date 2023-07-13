@@ -6,12 +6,12 @@ import './ScoreContainer.css'
 function ScoreContainer({scores, handleDelete, setScores}){
     const [deleteMode,setDeleteMode] = useState(false)
     const [nameSearch, setSearch] =useState('')
-    
+
 
     function handleDeleteMode(e){
         setDeleteMode(!deleteMode)
     }
-    
+
     function handleSort(e){
         let temp = []
         switch(e.target.value){
@@ -27,11 +27,11 @@ function ScoreContainer({scores, handleDelete, setScores}){
         }
         setScores([...temp])
       }
-    
+
     function handleSearch(e){
        setSearch(e.target.value)
     }
-    
+
 
     return(
     <Fragment>
@@ -40,13 +40,13 @@ function ScoreContainer({scores, handleDelete, setScores}){
         </div>
         <div className='itemBox'>
          {scores.filter((score)=>{
-            return nameSearch.toLocaleLowerCase == ''?  score: score.songName.toLocaleLowerCase().includes(nameSearch)
+            return nameSearch.toLocaleLowerCase() == ''?  score: score.songName.toLocaleLowerCase().includes(nameSearch)
          }).map((score)=>
          <Score key={score.id} score={score} deleteMode={deleteMode} handleDelete={handleDelete}/>
          )}
     </div>
-    </Fragment>  
-    ) 
+    </Fragment>
+    )
 }
 
 
