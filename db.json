@@ -52,19 +52,19 @@
   "CloneHeroScores": [
     {
       "gameType": "Clone Hero",
-      "songName": "Free Bird",
-      "songLink": "https://www.youtube.com/embed/J9olZAyrs8A",
-      "highScore": "614804",
-      "date": "2023-07-05",
-      "id": 3
+      "songName": "Phantom Below - Moron Police",
+      "songLink": "https://www.youtube.com/embed/jS3mpaKjbqQ",
+      "highScore": "94834",
+      "date": "2023-04-17",
+      "id": 2
     },
     {
       "gameType": "Clone Hero",
-      "songName": "Anchor",
+      "songName": "Anchor ",
       "songLink": "https://www.youtube.com/embed/91dYNlBcYkM",
-      "highScore": "601233",
-      "date": "2023-07-06",
-      "id": 2
+      "highScore": "87423",
+      "date": "2023-07-13",
+      "id": 3
     }
   ],
   "MusicDiverScores": [

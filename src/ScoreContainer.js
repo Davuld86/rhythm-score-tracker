@@ -40,7 +40,7 @@ function ScoreContainer({scores, handleDelete, setScores}){
         </div>
         <div className='itemBox'>
          {scores.filter((score)=>{
-            return nameSearch.toLocaleLowerCase() == ''?  score: score.songName.toLocaleLowerCase().includes(nameSearch)
+            return nameSearch.toLocaleLowerCase() == ''?  score: score.songName.toLocaleLowerCase().includes(nameSearch.toLocaleLowerCase())
          }).map((score)=>
          <Score key={score.id} score={score} deleteMode={deleteMode} handleDelete={handleDelete}/>
          )}
